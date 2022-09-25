@@ -500,7 +500,7 @@ if ($error) {
 	print &ui_table_row($text{'name'}, &ui_textbox('VPN_NAME',$in{'VPN_NAME'},50));
 	print &ui_table_row($text{'port'}, &ui_textbox('port',$in{'port'},50));
     }
-    print &ui_table_row($text{'protocol'}, &ui_select('proto', $in{'proto'}, [ ['udp','udp'],['tcp-server','tcp-server'],['tcp-client','tcp-client'] ]));
+    print &ui_table_row($text{'protocol'}, &ui_select('proto', $in{'proto'}, [ ['udp','udp'],['udp6','udp6'],['tcp-server','tcp-server'],['tcp6-server','tcp6-server'],['tcp-client','tcp-client'],['tcp6-client','tcp6-client'] ]));
     if ($in{'modify'} == 1) {
 	$in{'dev'} =~ /^(\D*)(\d*)$/;
 	$dev = $1;
