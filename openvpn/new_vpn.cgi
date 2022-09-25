@@ -88,7 +88,7 @@ if (@$a_server) {
     print &ui_table_start($text{'newvpn_server_title'},'',2);
     print &ui_table_row($text{'name'}, &ui_textbox('VPN_NAME','changeme',50));
     print &ui_table_row($text{'port'}, &ui_textbox('port','1194',50));
-    print &ui_table_row($text{'protocol'}, &ui_select('proto', 'udp', [ ['udp','udp'],['tcp-server','tcp-server'],['tcp-client','tcp-client'] ]));
+    print &ui_table_row($text{'protocol'}, &ui_select('proto', 'udp', [ ['udp','udp'],['udp6','udp6'],['tcp-server','tcp-server'],['tcp6-server','tcp6-server'],['tcp-client','tcp-client'],['tcp6-client','tcp6-client'] ]));
     print &ui_table_row($text{'dev'}, &ui_select('dev', 'tun', [ ['tun','tun'],['tap','tap'] ]));
 ##############################
 ##############################
