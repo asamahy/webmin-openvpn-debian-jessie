@@ -99,7 +99,7 @@ print &ui_hidden('crl-verify',$config{'openvpn_keys_subdir'}.'/'.$in{'ca'}.'/crl
 print &ui_table_start($text{'modifyvpn_server_title'},'',2);
 print &ui_table_row($text{'name'}, $in{'vpn'});
 print &ui_table_row($text{'port'}, $in{'port'});
-print &ui_table_row($text{'protocol'}, &ui_select('proto', $in{'proto'}, [ ['udp','udp'],['tcp-server','tcp-server'],['tcp-client','tcp-client'] ]));
+print &ui_table_row($text{'protocol'}, &ui_select('proto', $in{'proto'}, [ ['udp','udp'],['udp6','udp6'],['tcp-server','tcp-server'],['tcp6-server','tcp6-server'],['tcp-client','tcp-client'],['tcp6-client','tcp6-client'] ]));
 $in{'dev'} =~ /^(\D*)(\d*)$/;
 $dev = $1;
 $numberdev = $2;
